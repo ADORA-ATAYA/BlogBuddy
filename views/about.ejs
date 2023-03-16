@@ -1,0 +1,19 @@
+<%- include('header.ejs')%>
+<div class="container-fluid" style="padding-top: 4cm;">
+    <% d.forEach((item) =>{ %>
+        <div class="row ml-5">
+            <div class="col-md-6">
+                <h1 class="navstyle"><strong>About Us</strong></h1>
+                <br>
+                <p class="p">
+                   <%= item.content %>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="<%= item.image.url %>" style="width: 100%;padding-top:160px;">
+            </div>
+        </div>
+   <% }) %>
+    
+</div>
+<%- include('footer.ejs')%>

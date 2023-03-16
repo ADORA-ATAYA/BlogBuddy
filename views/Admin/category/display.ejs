@@ -1,0 +1,104 @@
+<%- include('../Dashboardhead.ejs') %>
+<style>
+  input[type="file"]::file-selector-button {
+    border: 2px solid #6c5ce7;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    background-color: #a29bfe;
+    transition: 1s;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+    background-color: #81ecec;
+    border: 2px solid #00cec9;
+  }
+</style>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-6"><h1>Category Data</h1></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                             <i class="fa fa-plus"></i> Add Category
+                            </button>
+                        </div>
+                    </div>
+
+        <!--blog table-->
+                    <table class="table table-bordered table-striped">
+                        <thead class="bg-success">
+                          <tr>
+                            <th scope="col">Id No.</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">description</th>
+                            <th scope="col">Posted On</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                          
+                        </thead>
+                        <tbody>
+
+                          <% d.forEach((item)=>{ %>
+                          <tr>
+                            <th scope="row"><%= item._id %></th>
+                            <td><%= item.title %></td>
+                            <td><%= item.description.slice(0,100) %></td>
+                            <td><%= item.postdate %></td>
+                            <td><img   src="<%= item.image.url %>" class="displayimg"></td>
+                            <td>
+                                <a href="/categoryedit/<%= item._id %>"><button class="btn btn-success fa fa-edit"></button></a>
+                                <a href="/categorydelete/<%= item._id %>"><button class="btn btn-success fa fa-trash-can"></button></a>
+                                <a href="/categoryview/<%= item._id %>"><button class="btn btn-success fa fa-eye"></button></a>
+                            </td>
+                          </tr>                          
+                          <% }) %>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+      </div>
+
+<!--modal blog create-->
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+          <button type="button" class="fa fa-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/insertcategory" method="post" enctype="multipart/form-data"><!--enctype use for images-->
+                <div class="mb-3">
+                    <label>Add Tag :</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label>Description :</label>
+                    <textarea type ="text" name="description" class="form-control" style="height:5cm;"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label>Date :</label>
+                    <input type ="date" name="postdate" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="fileUpload">Upload Img :</label>
+                  <input type="file" name="image" class="form-control"  style="padding-bottom:42px;">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
+<div style="padding-top: 5cm;"></div>
+<%-include("../../footer.ejs")%>

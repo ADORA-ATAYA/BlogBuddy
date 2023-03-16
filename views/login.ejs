@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--for social media-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--javascript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+crossorigin="anonymous"></script>
+
+<!--mycss-->
+<link rel="stylesheet" href="/css/loginstyle.css">
+
+<title>LogIn</title>
+</head>
+<body class="bodyimg">
+
+    
+
+    <!--login start-->
+    <div class="container">
+        <div class="row box-form">
+            <div class="col-md-7  leftstyle">
+                <br><br>
+                <h1>Welcome to,</h1>
+                <h1 style="font-size: 70px;">BlogBuddy</h1>
+                <br>
+                <h5>Here we give you full freedom to write anything ,Whatever is come in you mind.</h5>
+                <br><br><br>
+                <span>
+                    <p>login with</p>
+                    <a href="#"><i class="fa fa-facebook" ></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                </span>
+            </div>
+            <div class="col-md-5 right">
+                <form action="/adminlogin" method="post">
+                <% if(message.length > 0){ %>
+                    <div class="alert alert-success">
+                        <%= message %>
+                    </div>
+                <% } %>
+                <% if(error.length > 0){ %>
+                    <div class="alert alert-danger">
+                        <%= error %>
+                    </div>
+                <% } %>
+                    <h5 style="padding-top: 1cm;">Login</h5>
+                    <br><br>
+                    <div class="inputs">
+                        <input type="email" name="email" placeholder="Email">
+                        <br>
+                        <input type="password" name="password" placeholder="password">
+                    </div>			
+                    <br><br>
+                    <div class="remember-me--forget-password">
+                        <label>
+                            <!-- <input type="checkbox" name="item" checked/> -->
+                            <span class="text-checkbox">Remember me</span>
+                        </label>
+                        <a href="">forget password?</a>
+                    </div>
+                    <br>
+                    <p>Don't have an account? <a href="/register">Creat Your Account</a> it takes less than a minute</p>
+                    <br>
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Login end-->
+</body>
+</html>

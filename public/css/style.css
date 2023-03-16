@@ -1,0 +1,119 @@
+.navstyle{
+    color: rgb(84, 219, 129);
+    font-family: cursive;
+}
+.navbar-nav{
+    padding: 0 20px;
+}
+.banner{
+    background-image: url("/img/newblog.jpg");
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: cover;
+}
+
+.hcls{
+    padding-top: 3cm;
+    text-align: center;
+    font-size:50px;
+    font-weight: 2000;
+    color: rgb(35, 202, 91);
+}
+.navbar{
+    background:#00000090!important;
+}
+
+.p{
+    line-height: 35px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    padding-right: 5px;
+    text-align: justify;
+}
+.p1{
+    color: black;
+    padding-top: 2cm;
+    line-height: 35px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    padding-right: 5px;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.readmorep1{
+    color: black;
+    line-height: 35px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card{
+    border: 0.1cm solid black;
+}
+
+.mainfooter{
+    background: #020306;
+    padding: 50px;
+    color: #fff;
+}
+.img{
+    width: 50%;
+    margin-top: 30px;
+}
+.ml{
+    font-family: 'prague'; 
+    font-size: 2 rem;   
+    line-height: 50px; 
+    letter-spacing: 3px; 
+    color: #fff;
+}
+
+.footp{
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+.footadd{
+    padding: 15px;
+}
+
+.contactimg{
+    padding-left: 10px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+.dashbtn{
+    width:5cm;
+    text-align:justify;
+    font-family: cursive;
+    background-color:rgb(219, 219, 219);
+    border: solid 2px white;
+    box-shadow: 0 0 10px 6px #53e7e7;;
+}
+.dashbtn:hover{
+    background-color:  rgb(84, 219, 129);
+}
+.dashbtn:focus-visible{
+    background-color:  rgb(84, 219, 129);
+}
+
+.displayimg{
+    width: 100px;
+    height:90px;
+    border: 3px;
+}
+
+.displayimgblog{
+    width: auto;
+    height: 4cm;
+    border: 3px;
+}
+
+table  { margin-top:  20px; display:inline-block; overflow:auto;}
+th div {  position:absolute; }

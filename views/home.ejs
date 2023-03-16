@@ -1,0 +1,42 @@
+<%- include('./header.ejs') %>
+<div class="container-fluid">
+    <div class="container hcls">
+        <h1>The easiest website <span style="color: black; font-family:cursive">Ever !</span></h1>
+        <h1>Write whatever your want <span style="color: black; font-family:cursive">,Anything comes in you mind !</span></h1>
+    </div><!--container end-->
+    <br>
+    <div class="container banner">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <p class="p1">
+                    A blog is a discussion or informational 
+                    website published on the World Wide Web consisting of discrete, often informal 
+                    diary-style text entries (posts). Posts are typically displayed in reverse 
+                    chronological order so that the most recent post appears first, at the top of the web page. 
+                </p>
+                <center><button class="btn btn-success mb-5">KNOW MORE</button></center>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div><!--container end-->
+</div><!--container fluid end-->
+<br>
+<div class="container">
+    <div class="row">
+        <% b.forEach((item) => { %>
+            <div class="col-md-4 mt-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="<%= item.image.url %>" class="card-img-top displayimgblog" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= item.title.slice(0,25) %></h5>
+                      <p class="card-text"><%= item.description.slice(0,50) %></p>
+                      <p>Last Updated on ..<span><%= item.createdAt.toLocaleDateString() %></span></p>
+                      <a href="/readmore/<%= item.id %>" class="btn btn-primary">Read More...</a>
+                    </div>
+                </div>
+            </div>
+      <%  })%>
+    </div>
+</div><!--container end-->
+<%- include('./footer.ejs') %>
