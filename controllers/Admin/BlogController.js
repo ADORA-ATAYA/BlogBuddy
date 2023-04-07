@@ -77,7 +77,7 @@ class BlogController {
             // console.log(req.params.id)
             const data = await blogmodel.findById(req.params.id)
             // console.log(data)
-            res.render('admin/blog/view',{view:data})
+            res.render('Admin/blog/view',{view:data})
         }catch(error){
             console.log(error)
         }
@@ -87,7 +87,7 @@ class BlogController {
             // console.log(req.params.id)
             const data = await blogmodel.findById(req.params.id)
             // console.log(data)
-            res.render('admin/blog/edit',{edit:data})
+            res.render('Admin/blog/edit',{edit:data})
         }catch(error){
             console.log(error)
         }

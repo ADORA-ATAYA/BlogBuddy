@@ -14,7 +14,7 @@ class AboutController{
             console.log("dsfgghf...")
             const data = await aboutusmodel.find()
             console.log(data)
-            res.render('admin/about/display',{d:data})
+            res.render('Admin/about/display',{d:data})
         }catch(error){
             console.log(error)
         }
@@ -47,7 +47,7 @@ class AboutController{
             // console.log(req.params.id)
             const data = await aboutusmodel.findById(req.params.id)
             // console.log(data)
-            res.render('admin/about/edit',{edit:data})
+            res.render('Admin/about/edit',{edit:data})
         }catch(error){
             console.log(error)
         }

@@ -15,7 +15,7 @@ class CategoryController{
         try{
             const data = await categorymodel.find()
             // console.log(data)
-            res.render('admin/category/display',{d:data})
+            res.render('Admin/category/display',{d:data})
         }catch(error){
             console.log(error)
         }
@@ -51,7 +51,7 @@ class CategoryController{
             // console.log(req.params.id)
             const data = await categorymodel.findById(req.params.id)
             // console.log(data)
-            res.render('admin/category/view',{view:data})
+            res.render('Admin/category/view',{view:data})
         }catch(error){
             console.log(error)
         }
@@ -61,7 +61,7 @@ class CategoryController{
             // console.log(req.params.id)
             const data = await categorymodel.findById(req.params.id)
             // console.log(data)
-            res.render('admin/category/edit',{edit:data})
+            res.render('Admin/category/edit',{edit:data})
         }catch(error){
             console.log(error)
         }

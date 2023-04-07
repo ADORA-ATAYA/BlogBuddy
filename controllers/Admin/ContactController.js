@@ -4,7 +4,7 @@ class ContactController{
     static contactdisplay= async(req,res)=>{
         try{
             const data = await contactmodel.find()
-            res.render('admin/contact/display',{d:data});
+            res.render('Admin/contact/display',{d:data});
         }catch(error){
             console.log(error)
         }
@@ -12,7 +12,7 @@ class ContactController{
     static contactview = async(req,res) => {
         try{
             const data = await contactmodel.findById(req.params.id)
-            res.render('admin/contact/view',{view:data})
+            res.render('Admin/contact/view',{view:data})
         }catch(error){
             console.log(error)
         }
