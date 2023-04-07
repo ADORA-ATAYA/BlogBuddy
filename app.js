@@ -5,7 +5,8 @@ const port=3000
 const connectdb = require('./db/connectdb')
 const fileUpload = require("express-fileupload")
 const cloudinary = require('cloudinary');
-var session = require('express-session')
+// var session = require('express-session')
+var session = require('cookie-session');
 var flash = require('connect-flash');
 
 //cookies
