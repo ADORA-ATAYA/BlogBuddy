@@ -8,13 +8,13 @@ class AdminController {
     static dashboard = async(req, res) => {
         try{
             const {name,email} = req.admin
-            res.render('admin/dashboard',{n:name,e:email})
+            res.render('Admin/dashboard',{n:name,e:email})
         }catch(error){
             console.log(error)
         }
     }
     static displayblog = (req, res) => {
-        res.render('admin/displayblog')
+        res.render('Admin/displayblog')
     }
 
     static register = async (req, res) => {

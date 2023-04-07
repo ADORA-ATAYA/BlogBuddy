@@ -14,7 +14,6 @@ const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 
 
-
 //database connection
 connectdb()
 app.use(express.urlencoded({extended:false}))
