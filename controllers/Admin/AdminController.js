@@ -73,7 +73,7 @@ class AdminController {
                         const token = jwt.sign({id:admin._id},'pragyanshutayal1234')
                         // console.log(token)
                         res.cookie('token',token)
-                        res.redirect('/admin/dashboard')
+                        res.redirect('/home')
                     }
                     else{
                         req.flash('error', 'Wrong Email or Password entered')

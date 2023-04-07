@@ -15,7 +15,7 @@ class BlogController {
         try{
             const data = await blogmodel.find()
             // console.log(data)
-            res.render('admin/blog/display',{d:data})
+            res.render('Admin/blog/display',{d:data})
         }catch(error){
             console.log(error)
         }
