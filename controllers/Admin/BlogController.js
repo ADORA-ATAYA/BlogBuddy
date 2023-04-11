@@ -13,10 +13,10 @@ class BlogController {
 
     static displayblog = async(req, res) => {
         try{
-            // const {email} = req.admin
+            const {email} = req.admin
             const data = await blogmodel.find()
             // console.log(data)
-            res.render('Admin/blog/display',{d:data})
+            res.render('Admin/blog/display',{d:data,e:email})
         }catch(error){
             console.log(error)
         }

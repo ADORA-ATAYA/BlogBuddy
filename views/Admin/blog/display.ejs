@@ -22,8 +22,12 @@
                              <i class="fa fa-plus"></i> Add Blog
                             </button>
                         </div>
-                    </div>
-
+                      </div>
+                      <div class="row">
+                        <% if(e != "pragyanshutayal2100@gmail.com"){ %>
+                          <h5 style="color:orange">&nbsp&nbspEdit and delete option is only for Pragyanshu Tayal</h5>
+                        <% } %>
+                      </div>
         <!--blog table-->
                     <table class="table table-bordered table-striped">
                         <thead class="bg-success">
@@ -45,8 +49,12 @@
                             <td><%= item.description.slice(0,100) %>..</td>
                             <td><img src="<%= item.image.url %>" class="displayimg"></td>
                             <td>
+                              <% if(e === "pragyanshutayal2100@gmail.com"){ %>
                                 <a href="/blogedit/<%= item._id %>"><button class="btn btn-success fa fa-edit"></button></a>
-                                <a href="/blogdelete/<%= item._id %>"><button class="btn btn-success fa fa-trash-can"></button></a>
+                                <% } %>
+                                <% if(e == "pragyanshutayal2100@gmail.com"){ %>
+                                  <a href="/blogdelete/<%= item._id %>"><button class="btn btn-success fa fa-trash-can"></button></a>
+                                <% } %>
                                 <a href="/blogview/<%= item._id %>"><button class="btn btn-success fa fa-eye"></button></a>
                             </td>
                           </tr>                          
