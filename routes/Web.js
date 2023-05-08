@@ -18,6 +18,7 @@ router.get('/blog',auth,FrontController.blog)
 router.get('/readmore/:id',FrontController.readmore)
 router.post('/contactinsert',FrontController.insertcontactdata)
 router.get('/api/getAllBlogs',FrontController.getallblogs)
+router.get('/api/getAllBlogsbyid/:id',FrontController.getallblogsbyid)
 
 
 //admin Controller

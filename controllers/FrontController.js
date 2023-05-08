@@ -91,8 +91,15 @@ class FrontController{
     static getallblogs = async (req,res)=>{
         try{
             const blogs = await blogmodel.find();
-            console.log(blogs)
             res.send(blogs);
+        }catch(error){
+            console.log(error)
+        }
+    }
+    static getallblogsbyid = async (req,res)=>{
+        try{
+            const data = await blogmodel.findById(req.params.id);
+            res.send(data);
         }catch(error){
             console.log(error)
         }
