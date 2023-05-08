@@ -2,6 +2,7 @@ const blogmodel = require('../models/Blog')
 const categorymodel = require('../models/Category')
 const aboutusmodel = require('../models/Aboutus')
 const contactmodel = require('../models/Contact')
+const BlogModel = require('../models/Blog')
 
 class FrontController{
     
@@ -82,6 +83,16 @@ class FrontController{
     static register= async(req,res)=>{
         try{
             res.render('register',{message:req.flash('error')})
+        }catch(error){
+            console.log(error)
+        }
+    }
+
+    static getallblogs = async (req,res)=>{
+        try{
+            const blogs = await blogmodel.find();
+            console.log(blogs)
+            res.send(blogs);
         }catch(error){
             console.log(error)
         }
